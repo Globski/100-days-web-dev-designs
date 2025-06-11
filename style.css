@@ -41,20 +41,45 @@ nav {
   color: #FF5A5F;            /* Airbnb-inspired pink color */
 }
 
-/* Center links in the navbar */
-.nav-center {
-  display: flex;             /* Horizontal layout for links */
-  gap: 30px;                 /* Space between each link */
-  justify-content: center;  /* Center them inside the middle section */
-  flex-grow: 1;             /* Allows this section to expand */
+/* Navbar link base styling */
+.nav-links {
+  display: flex; /* Arrange nav items in a row using flexbox */
+  gap: 30px; /* Add 30px space between each nav item */
+  list-style: none; /* Remove the default bullet points from the list */
+  padding: 0; /* Remove default padding inside the list */
+  margin: 0; /* Remove default margin outside the list */
+  align-items: center; /* Vertically align nav items in the center */
 }
 
-/* Style individual links */
-.nav-center a {
-  text-decoration: none;    /* Remove underlines from links */
-  color: #333;              /* Dark gray text color */
-  font-weight: 600;         /* Slightly bold */
+.nav-link {
+  position: relative; /* Make it possible to position underline relative to this element */
+  text-decoration: none; /* Remove the default underline from the link */
+  font-size: 1rem; /* Set the font size to 1 rem (responsive size) */
+  color: #222; /* Set the text color to dark gray */
+  font-weight: 500; /* Make the text medium-bold */
+  padding: 4px 0; /* Add 4px space on top and bottom for visual breathing room */
+  transition: color 0.3s ease; /* Smooth color transition when hovered or clicked */
 }
+
+/* Underline effect using a pseudo-element */
+.nav-link::after {
+  content: ''; /* Required to display the pseudo-element; this makes it show */
+  position: absolute; /* Allows positioning the underline absolutely within the link */
+  left: 0; /* Start the underline from the left edge of the link */
+  bottom: 0; /* Place the underline at the bottom of the link */
+  height: 2px; /* Set the thickness of the underline */
+  width: 0; /* Start with no underline visible */
+  background-color: #ff385c; /* Set the underline color to Airbnb's pink */
+  transition: width 0.3s ease; /* Animate the underline’s width smoothly when it appears */
+}
+
+/* When the user hovers, focuses (keyboard), or clicks the link */
+.nav-link:hover::after,      /* When hovered with the mouse */
+.nav-link:focus::after,      /* When focused using the keyboard (accessibility) */
+.nav-link.active::after {    /* When link is marked as "active" (like current page) */
+  width: 100%; /* Expand the underline to cover the entire text */
+}
+
 
 /* Right section (contact button + hamburger icon) */
 .right-section {
