@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- This helps the site display properly on all devices (like phones, tablets, desktops) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Globski Navbar</title>
+
+  <!-- Importing a nice-looking font from Google Fonts to style our text -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&display=swap" rel="stylesheet">
+
+  <!-- This links our CSS file so the styles are applied to the page -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- The navigation bar that sits at the top of the page -->
+  <nav>
+    <!-- Logo section (left side) -->
+    <div class="logo">
+      <!-- This is an SVG image that draws a circle and a "G" shape inside it -->
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <!-- Pink circle background -->
+        <circle cx="50" cy="50" r="45" fill="#FF5A5F" />
+        <!-- White "G"-like shape drawn using a path -->
+        <path d="M60 30 H40 A20 20 0 1 0 60 70 H50"
+              stroke="white"
+              stroke-width="8"
+              fill="none"
+              stroke-linecap="round" />
+      </svg>
+      <!-- Brand name text next to the logo -->
+      <div class="logo-text">Globski</div>
+    </div>
+
+    <!-- This is the center part of the navbar with navigation links -->
+    <div class="nav-center">
+      <!-- Links to different sections of the site -->
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Projects</a>
+    </div>
+
+    <!-- This is the right section with a contact button and menu icon -->
+    <div class="right-section">
+      <!-- A button the user can click to contact you -->
+      <button class="contact-btn">Contact Me</button>
+      <!-- A hamburger menu icon (☰) for smaller screens -->
+      <button class="menu-toggle" onclick="toggleDropdown()">☰</button>
+    </div>
+
+    <!-- The dropdown menu that appears when the hamburger icon is clicked -->
+    <ul class="dropdown" id="dropdownMenu">
+      <li>Blogs</li>
+      <li>Services I Provide</li>
+      <li>Testimonials</li>
+    </ul>
+  </nav>
+
+  <!-- Linking our JavaScript file to make the dropdown menu interactive -->
+  <script src="script.js"></script>
+
+</body>
+</html>
