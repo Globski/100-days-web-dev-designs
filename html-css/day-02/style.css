@@ -1,0 +1,119 @@
+/* Reset margin and padding for all elements and set the box model */
+* {
+  box-sizing: border-box;  /* Includes padding and borders inside width/height */
+  margin: 0;               /* Remove default spacing outside elements */
+  padding: 0;              /* Remove default spacing inside elements */
+}
+
+/* Set the base font for the whole page */
+body {
+  font-family: 'Nunito Sans', sans-serif; /* Use a clean, modern font */
+}
+
+/* Main navbar style */
+nav {
+  display: flex;                  /* Arrange items horizontally */
+  align-items: center;           /* Vertically center items */
+  justify-content: space-between;/* Space out left, center, and right sections */
+  padding: 20px 50px;            /* Add space inside the navbar */
+  background-color: #fff;        /* White background */
+  border-bottom: 1px solid #ccc; /* Light gray line under the navbar */
+  position: relative;            /* Needed to position dropdown menu correctly */
+}
+
+/* LOGO container (left) */
+.logo {
+  display: flex;           /* Horizontal layout */
+  align-items: center;     /* Vertically center the SVG and text */
+  gap: 12px;               /* Space between logo image and text */
+}
+
+/* The SVG logo size */
+.logo svg {
+  width: 40px;
+  height: 40px;
+}
+
+/* Text beside the logo ("Globski") */
+.logo-text {
+  font-size: 1.8rem;         /* Large text size */
+  font-weight: 700;          /* Make text bold */
+  color: #FF5A5F;            /* Airbnb-inspired pink color */
+}
+
+/* Center links in the navbar */
+.nav-center {
+  display: flex;             /* Horizontal layout for links */
+  gap: 30px;                 /* Space between each link */
+  justify-content: center;  /* Center them inside the middle section */
+  flex-grow: 1;             /* Allows this section to expand */
+}
+
+/* Style individual links */
+.nav-center a {
+  text-decoration: none;    /* Remove underlines from links */
+  color: #333;              /* Dark gray text color */
+  font-weight: 600;         /* Slightly bold */
+}
+
+/* Right section (contact button + hamburger icon) */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;                /* Space between contact button and menu icon */
+}
+
+/* Contact button style */
+.contact-btn {
+  padding: 8px 16px;
+  border: none;             /* Remove border */
+  background-color: #FF5A5F;/* Same pink as the logo */
+  color: white;             /* White text */
+  font-weight: bold;
+  border-radius: 4px;       /* Rounded corners */
+  cursor: pointer;          /* Cursor changes on hover */
+}
+
+/* Hamburger icon button (menu toggle) */
+.menu-toggle {
+  font-size: 24px;          /* Large font size for icon */
+  cursor: pointer;          /* Make it clickable */
+  background: none;         /* Remove background */
+  border: none;             /* Remove border */
+  color: #333;              /* Dark gray color */
+}
+
+/* Dropdown menu styles */
+.dropdown {
+  position: absolute;       /* Position relative to the navbar */
+  top: 70px;                /* Appear just below the navbar */
+  right: 50px;              /* Align to the right with same padding */
+  background-color: white;  /* White background */
+  border: 1px solid #ccc;   /* Light border around */
+  border-radius: 4px;       /* Rounded corners */
+  display: none;            /* Hidden by default */
+  flex-direction: column;   /* Stack items vertically */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+/* Dropdown list items */
+.dropdown li {
+  list-style: none;        /* Remove bullet points */
+  padding: 10px 20px;      /* Spacing inside each item */
+  border-bottom: 1px solid #eee; /* Light gray line between items */
+}
+
+/* Remove bottom border from last dropdown item */
+.dropdown li:last-child {
+  border-bottom: none;
+}
+
+/* Hover effect for dropdown items */
+.dropdown li:hover {
+  background-color: #f9f9f9; /* Light gray when hovered */
+}
+
+/* Class added by JS to show dropdown */
+.show {
+  display: flex;            /* Make dropdown visible as a column */
+}
