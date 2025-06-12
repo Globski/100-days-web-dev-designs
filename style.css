@@ -198,6 +198,24 @@ nav {
   border-radius: 8px;
 }
 
+.footer {
+  background-color: #f1f1f1;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  margin-top: 50px;
+}
+
+.footer-content a {
+  color: #333;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   nav {
