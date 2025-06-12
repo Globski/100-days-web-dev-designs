@@ -2,64 +2,135 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <!-- This helps the site display properly on all devices (like phones, tablets, desktops) -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Globski Navbar</title>
-
-  <!-- Importing a nice-looking font from Google Fonts to style our text -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gloria Ogunsemore - Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&display=swap" rel="stylesheet">
-
-  <!-- This links our CSS file so the styles are applied to the page -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- The navigation bar that sits at the top of the page -->
+  <!-- Navigation Bar -->
   <nav>
-    <!-- Logo section (left side) -->
+    <!-- Left: Logo -->
     <div class="logo">
-      <!-- This is an SVG image that draws a circle and a "G" shape inside it -->
       <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <!-- Pink circle background -->
         <circle cx="50" cy="50" r="45" fill="#FF5A5F" />
-        <!-- White "G"-like shape drawn using a path -->
-        <path d="M60 30 H40 A20 20 0 1 0 60 70 H50"
-              stroke="white"
-              stroke-width="8"
-              fill="none"
-              stroke-linecap="round" />
+        <path d="M60 30 H40 A20 20 0 1 0 60 70 H50" stroke="white" stroke-width="8" fill="none" stroke-linecap="round" />
       </svg>
-      <!-- Brand name text next to the logo -->
       <div class="logo-text">Globski</div>
     </div>
 
-    <!-- This is the center part of the navbar with navigation links -->
-    
+    <!-- Center: Navigation Links -->
     <ul class="nav-links">
-      <!-- Links to different sections of the site -->
-      <li><a href="#" class="nav-link">Home</a></li>
-      <li><a href="#" class="nav-link">About</a></li>
-      <li><a href="#" class="nav-link">Projects</a></li>
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#experience" class="nav-link">Projects</a></li>
     </ul>
 
-    <!-- This is the right section with a contact button and menu icon -->
+    <!-- Right: Buttons -->
     <div class="right-section">
-      <!-- A button the user can click to contact you -->
       <button class="contact-btn">Contact Me</button>
-      <!-- A hamburger menu icon (☰) for smaller screens -->
       <button class="menu-toggle" onclick="toggleDropdown()">☰</button>
     </div>
 
-    <!-- The dropdown menu that appears when the hamburger icon is clicked -->
+    <!-- Dropdown for small screens -->
     <ul class="dropdown" id="dropdownMenu">
-      <li>Blogs</li>
-      <li>Services</li>
-      <li>Testimonials</li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- Linking our JavaScript file to make the dropdown menu interactive -->
-  <script src="script.js"></script>
+  <!-- Home Section -->
+  <section id="home" class="section home-section">
+    <div class="home-left">
+      <h2 class="hello-box">Hello there</h2>
+      <h1><span class="highlight">I’m Gloria Ogunsemore</span>, Software Engineer<br>Based in Nigeria</h1>
+      <p class="small-text">Bootcamp-trained Software Engineer, passionate about building, learning, and simplifying technology — one project at a time.</p>
+      <button class="portfolio-btn">Build My Portfolio</button>
+    </div>
+    <div class="home-right">
+      <div class="image-frame">
+        <img src="images/gloria.jpg" alt="Gloria Ogunsemore">
+      </div>
+      <button class="title-btn">UI/UX Designer</button>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section about-section">
+    <div class="about-left">
+      <img src="images/about.jpg" alt="About Gloria">
+    </div>
+    <div class="about-right">
+      <h2>About Me</h2>
+      <p class="about-intro"><strong>Who is Gloria Ogunsemore?</strong> I started my journey with a software engineering bootcamp and quickly fell in love with the challenge of building and simplifying technology. Today, I’m focused on learning, growing, and creating solutions that make complex things easy to understand.</p>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section experience-section">
+    <h2>Experience & Education</h2>
+    <div class="experience-box">
+      <h3>Self-Taught Software Developer</h3>
+      <p>2023 – Present</p>
+      <ul>
+        <li>Building personal projects to solve real-world problems and strengthen development skills.</li>
+        <li>Focused on simplifying complex concepts and creating practical solutions.</li>
+        <li>Actively learning new technologies through self-paced study and hands-on coding.</li>
+      </ul>
+
+      <h3>Software Engineering Bootcamp</h3>
+      <p>2023 – 2024</p>
+      <ul>
+        <li>Completed an intensive program covering web development, algorithms, and system design.</li>
+        <li>Collaborated on group projects and built solo applications from scratch.</li>
+        <li>Gained experience in modern development tools and workflows.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Tools Section -->
+  <section id="tools" class="section tools-section">
+    <h2>Exploring the tools behind my design</h2>
+    <div class="tools-frame">
+      <img src="images/figma.png" alt="Figma">
+      <img src="images/photoshop.png" alt="Photoshop">
+      <img src="images/illustrator.png" alt="Illustrator">
+      <img src="images/sketch.png" alt="Sketch">
+      <img src="images/xd.png" alt="Adobe XD">
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="section portfolio-section">
+    <div class="portfolio-header">
+      <h2>My Latest Projects</h2>
+      <button class="view-all">View All Projects</button>
+    </div>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="images/project1.png" alt="Project 1">
+        <p>Weather Monitoring App</p>
+        <a href="#"><span class="arrow">→</span></a>
+      </div>
+      <!-- More project cards can be added here -->
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact-section">
+    <h2>Get in Touch</h2>
+    <p>Email | X (Twitter) | Instagram | Skype | Discord</p>
+  </section>
+
+  <!-- JavaScript for dropdown -->
+  <script>
+    function toggleDropdown() {
+      const menu = document.getElementById('dropdownMenu');
+      menu.classList.toggle('show');
+    }
+  </script>
 
 </body>
 </html>
