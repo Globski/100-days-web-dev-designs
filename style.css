@@ -17,6 +17,10 @@ body {
   border-bottom: 1px solid #ccc; /* Add a subtle line below each section */
 }
 
+.section:last-of-type {
+  border-bottom: none;
+}
+
 /* Navbar */
 nav {
   display: flex;
