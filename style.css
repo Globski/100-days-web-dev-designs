@@ -1,144 +1,212 @@
-/* Reset margin and padding for all elements and set the box model */
+/* Reset */
 * {
-  box-sizing: border-box;  /* Includes padding and borders inside width/height */
-  margin: 0;               /* Remove default spacing outside elements */
-  padding: 0;              /* Remove default spacing inside elements */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* Set the base font for the whole page */
+/* Base styles */
 body {
-  font-family: 'Nunito Sans', sans-serif; /* Use a clean, modern font */
+  font-family: 'Nunito Sans', sans-serif;
+  line-height: 1.6;
+  color: #333;
 }
 
-/* Main navbar style */
+.section {
+  padding: 60px 40px;
+}
+
+/* Navbar */
 nav {
-  display: flex;                  /* Arrange items horizontally */
-  align-items: center;           /* Vertically center items */
-  justify-content: space-between;/* Space out left, center, and right sections */
-  padding: 20px 50px;            /* Add space inside the navbar */
-  background-color: #fff;        /* White background */
-  border-bottom: 1px solid #ccc; /* Light gray line under the navbar */
-  position: relative;            /* Needed to position dropdown menu correctly */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 50px;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  position: relative;
 }
 
-/* LOGO container (left) */
 .logo {
-  display: flex;           /* Horizontal layout */
-  align-items: center;     /* Vertically center the SVG and text */
-  gap: 12px;               /* Space between logo image and text */
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-/* The SVG logo size */
 .logo svg {
   width: 40px;
   height: 40px;
 }
 
-/* Text beside the logo ("Globski") */
 .logo-text {
-  font-size: 1.8rem;         /* Large text size */
-  font-weight: 700;          /* Make text bold */
-  color: #FF5A5F;            /* Airbnb-inspired pink color */
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #FF5A5F;
 }
 
-/* Navbar link base styling */
 .nav-links {
-  display: flex; /* Arrange nav items in a row using flexbox */
-  gap: 30px; /* Add 30px space between each nav item */
-  list-style: none; /* Remove the default bullet points from the list */
-  padding: 0; /* Remove default padding inside the list */
-  margin: 0; /* Remove default margin outside the list */
-  align-items: center; /* Vertically align nav items in the center */
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
 }
 
 .nav-link {
-  position: relative; /* Make it possible to position underline relative to this element */
-  text-decoration: none; /* Remove the default underline from the link */
-  font-size: 1rem; /* Set the font size to 1 rem (responsive size) */
-  color: #222; /* Set the text color to dark gray */
-  font-weight: 500; /* Make the text medium-bold */
-  padding: 4px 0; /* Add 4px space on top and bottom for visual breathing room */
-  transition: color 0.3s ease; /* Smooth color transition when hovered or clicked */
+  position: relative;
+  text-decoration: none;
+  font-size: 1rem;
+  color: #222;
+  font-weight: 500;
+  padding: 4px 0;
+  transition: color 0.3s ease;
 }
 
-/* Underline effect using a pseudo-element */
 .nav-link::after {
-  content: ''; /* Required to display the pseudo-element; this makes it show */
-  position: absolute; /* Allows positioning the underline absolutely within the link */
-  left: 0; /* Start the underline from the left edge of the link */
-  bottom: 0; /* Place the underline at the bottom of the link */
-  height: 2px; /* Set the thickness of the underline */
-  width: 0; /* Start with no underline visible */
-  background-color: #ff385c; /* Set the underline color to Airbnb's pink */
-  transition: width 0.3s ease; /* Animate the underline’s width smoothly when it appears */
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #ff385c;
+  transition: width 0.3s ease;
 }
 
-/* When the user hovers, focuses (keyboard), or clicks the link */
-.nav-link:hover::after,      /* When hovered with the mouse */
-.nav-link:focus::after,      /* When focused using the keyboard (accessibility) */
-.nav-link.active::after {    /* When link is marked as "active" (like current page) */
-  width: 100%; /* Expand the underline to cover the entire text */
+.nav-link:hover::after,
+.nav-link:focus::after,
+.nav-link.active::after {
+  width: 100%;
 }
 
-
-/* Right section (contact button + hamburger icon) */
 .right-section {
   display: flex;
   align-items: center;
-  gap: 20px;                /* Space between contact button and menu icon */
+  gap: 20px;
 }
 
-/* Contact button style */
 .contact-btn {
   padding: 8px 16px;
-  border: none;             /* Remove border */
-  background-color: #FF5A5F;/* Same pink as the logo */
-  color: white;             /* White text */
+  border: none;
+  background-color: #FF5A5F;
+  color: white;
   font-weight: bold;
-  border-radius: 4px;       /* Rounded corners */
-  cursor: pointer;          /* Cursor changes on hover */
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-/* Hamburger icon button (menu toggle) */
 .menu-toggle {
-  font-size: 24px;          /* Large font size for icon */
-  cursor: pointer;          /* Make it clickable */
-  background: none;         /* Remove background */
-  border: none;             /* Remove border */
-  color: #333;              /* Dark gray color */
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #333;
 }
 
-/* Dropdown menu styles */
 .dropdown {
-  position: absolute;       /* Position relative to the navbar */
-  top: 70px;                /* Appear just below the navbar */
-  right: 50px;              /* Align to the right with same padding */
-  background-color: white;  /* White background */
-  border: 1px solid #ccc;   /* Light border around */
-  border-radius: 4px;       /* Rounded corners */
-  display: none;            /* Hidden by default */
-  flex-direction: column;   /* Stack items vertically */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+  position: absolute;
+  top: 70px;
+  right: 50px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* Dropdown list items */
 .dropdown li {
-  list-style: none;        /* Remove bullet points */
-  padding: 10px 20px;      /* Spacing inside each item */
-  border-bottom: 1px solid #eee; /* Light gray line between items */
+  list-style: none;
+  padding: 10px 20px;
+  border-bottom: 1px solid #eee;
 }
 
-/* Remove bottom border from last dropdown item */
 .dropdown li:last-child {
   border-bottom: none;
 }
 
-/* Hover effect for dropdown items */
 .dropdown li:hover {
-  background-color: #f9f9f9; /* Light gray when hovered */
+  background-color: #f9f9f9;
 }
 
-/* Class added by JS to show dropdown */
 .show {
-  display: flex;            /* Make dropdown visible as a column */
+  display: flex;
+}
+
+/* Home Section */
+.home-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-left h1 {
+  font-size: 2rem;
+  margin-top: 10px;
+}
+
+.highlight {
+  color: #FF5A5F;
+}
+
+.small-text {
+  max-width: 500px;
+  margin-top: 10px;
+}
+
+.portfolio-btn, .title-btn, .view-all {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #FF5A5F;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Project Grid */
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project-card {
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #eee;
+  width: 200px;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+/* Tools and About Images */
+.image-frame img,
+.about-left img,
+.tools-frame img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .home-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .right-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
