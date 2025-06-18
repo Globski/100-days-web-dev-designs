@@ -212,16 +212,28 @@ nav {
 .social-icons {
   margin-top: 15px;
   display: flex;
-  gap: 10px;
+  gap: 12px;
 }
+
 .social-icons a {
-  color: #333;
+  width: 40px;
+  height: 40px;
+  background-color: #FF5A5F; /* Same as portfolio button */
+  color: white;
+  border-radius: 50%; /* Makes it a circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 18px;
+  transition: background-color 0.3s ease, transform 0.2s;
 }
+
 .social-icons a:hover {
-  color: #FF5A5F;
+  background-color: #e14c54;
+  transform: scale(1.1);
 }
+
 
 .portfolio-header {
   display: flex;
