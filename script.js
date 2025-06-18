@@ -8,3 +8,12 @@ function toggleDropdown() {
   // If it is visible, it will be hidden again
   dropdown.classList.toggle('show');
 }
+
+document.addEventListener('click', function(event) {
+  const dropdown = document.getElementById('dropdownMenu');
+  const toggleBtn = document.querySelector('.menu-toggle');
+
+  if (!dropdown.contains(event.target) && !toggleBtn.contains(event.target)) {
+    dropdown.classList.remove('show');
+  }
+});
