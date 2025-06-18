@@ -11,8 +11,10 @@
 </head>
 <body>
 
+  <!-- Dark Mode Toggle -->
   <button id="darkToggle" class="dark-toggle">🌙</button>
 
+  <!-- Navigation Bar -->
   <nav>
     <div class="logo">
       <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -41,6 +43,7 @@
     </ul>
   </nav>
 
+  <!-- Home Section -->
   <section id="home" class="section home-section" data-aos="fade-up">
     <div class="home-left">
       <h2 class="hello-box">Hello there</h2>
@@ -62,6 +65,9 @@
     </div>
   </section>
 
+  <!-- About, Experience, Tools Sections - keep as-is -->
+
+  <!-- Testimonials -->
   <section id="testimonials" class="section testimonials-section" data-aos="zoom-in">
     <h2>Testimonials</h2>
     <blockquote>
@@ -74,6 +80,7 @@
     </blockquote>
   </section>
 
+  <!-- Portfolio Section -->
   <section id="portfolio" class="section portfolio-section" data-aos="fade-up">
     <div class="portfolio-header">
       <h2>My Latest Projects</h2>
@@ -98,6 +105,7 @@
     </div>
   </section>
 
+  <!-- Contact Form -->
   <section id="contact" class="section contact-section" data-aos="fade-right">
     <h2>Get in Touch</h2>
     <form id="contactForm">
@@ -108,8 +116,10 @@
     </form>
   </section>
 
+  <!-- Back to Top -->
   <button id="backToTop" title="Back to Top">↑</button>
 
+  <!-- Footer -->
   <footer class="footer">
     <div class="footer-content">
       <p>&copy; 2025 Globski. All rights reserved.</p>
@@ -118,11 +128,39 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="script.js"></script>
+  <script>
+    function toggleDropdown() {
+      const menu = document.getElementById('dropdownMenu');
+      menu.classList.toggle('show');
+    }
+
+    // Typed.js animation
+    const typed = new Typed('.typed-text', {
+      strings: ["I’m Gloria Ogunsemore", "Software Engineer", "UI/UX Designer", "Problem Solver"],
+      typeSpeed: 70,
+      backSpeed: 50,
+      loop: true
+    });
+
+    // Dark mode toggle
+    const darkToggle = document.getElementById('darkToggle');
+    darkToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+
+    // Back to Top logic
+    const backToTop = document.getElementById("backToTop");
+    window.onscroll = () => {
+      backToTop.style.display = (document.documentElement.scrollTop > 100) ? "block" : "none";
+    };
+    backToTop.onclick = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
+
 </body>
 </html>
-
