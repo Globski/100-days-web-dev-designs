@@ -215,9 +215,9 @@ nav {
   gap: 10px;
 }
 .social-icons a {
-  color: #333;
+  color: #FF5A5F;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 .social-icons a:hover {
   color: #FF5A5F;
