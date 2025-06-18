@@ -1,10 +1,30 @@
-// This function is called when the ☰ menu icon is clicked
-function toggleDropdown() {
-  // First, get the dropdown menu element using its ID
-  const dropdown = document.getElementById('dropdownMenu');
+<!-- Scripts -->
+  <script>
+    function toggleDropdown() {
+      const menu = document.getElementById('dropdownMenu');
+      menu.classList.toggle('show');
+    }
 
-  // Then, add or remove the "show" class
-  // If the dropdown is hidden, it will now be visible
-  // If it is visible, it will be hidden again
-  dropdown.classList.toggle('show');
-}
+    // Typed.js animation
+    const typed = new Typed('.typed-text', {
+      strings: ["I’m Gloria Ogunsemore", "Software Engineer", "UI/UX Designer", "Problem Solver"],
+      typeSpeed: 70,
+      backSpeed: 50,
+      loop: true
+    });
+
+    // Dark mode toggle
+    const darkToggle = document.getElementById('darkToggle');
+    darkToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+
+    // Back to Top logic
+    const backToTop = document.getElementById("backToTop");
+    window.onscroll = () => {
+      backToTop.style.display = (document.documentElement.scrollTop > 100) ? "block" : "none";
+    };
+    backToTop.onclick = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  </script>
