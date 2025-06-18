@@ -223,6 +223,14 @@ nav {
   color: #FF5A5F;
 }
 
+.portfolio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Keeps things neat on smaller screens */
+  margin-bottom: 20px;
+}
+
 /* Project Grid */
 .project-grid {
   display: flex;
