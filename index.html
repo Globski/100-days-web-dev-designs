@@ -2,12 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gloria Ogunsemore Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gloria Ogunsemore - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 <body>
+
+  <button id="darkToggle" class="dark-toggle">🌙</button>
+
   <nav>
     <div class="logo">
       <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -17,14 +22,15 @@
       <div class="logo-text">Globski</div>
     </div>
 
-    <ul class="nav-links">
+    <ul class="nav-links" id="navLinks">
       <li><a href="#home" class="nav-link">Home</a></li>
       <li><a href="#about" class="nav-link">About</a></li>
       <li><a href="#experience" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
 
     <div class="right-section">
-      <button class="contact-btn">Contact Me</button>
+      <a href="Gloria_Ogunsemore_Resume.pdf" download class="contact-btn">📄 Download Resume</a>
       <button class="menu-toggle" onclick="toggleDropdown()">☰</button>
     </div>
 
@@ -35,64 +41,40 @@
     </ul>
   </nav>
 
-  <section id="home" class="section home-section">
+  <section id="home" class="section home-section" data-aos="fade-up">
     <div class="home-left">
       <h2 class="hello-box">Hello there</h2>
-      <h1><span class="highlight">I’m Gloria Ogunsemore</span>, Software Engineer<br>Based in Nigeria</h1>
+      <h1><span class="highlight typed-text"></span></h1>
       <p class="small-text">Bootcamp-trained Software Engineer, passionate about building, learning, and simplifying technology — one project at a time.</p>
-      <button class="portfolio-btn">View My Portfolio</button>
+      <a href="#portfolio" class="portfolio-btn">View My Portfolio</a>
+      <div class="social-icons">
+        <a href="https://x.com/yourhandle" target="_blank">X</a>
+        <a href="https://instagram.com/yourhandle" target="_blank">IG</a>
+        <a href="https://linkedin.com/in/yourhandle" target="_blank">LI</a>
+        <a href="https://github.com/yourhandle" target="_blank">GH</a>
+      </div>
     </div>
     <div class="home-right">
       <div class="image-frame">
-        <img src="images/gloria.jpg" alt="Gloria Ogunsemore">
+        <img src="images/gloria.jpg" alt="Gloria Ogunsemore" />
       </div>
       <button class="title-btn">UI/UX Designer</button>
     </div>
   </section>
 
-  <section id="about" class="section about-section">
-    <div class="about-left">
-      <img src="images/about.jpg" alt="About Gloria">
-    </div>
-    <div class="about-right">
-      <h2>About Me</h2>
-      <p class="about-intro"><strong>Who is Gloria Ogunsemore?</strong> I started my journey with a software engineering bootcamp and quickly fell in love with the challenge of building and simplifying technology. Today, I’m focused on learning, growing, and creating solutions that make complex things easy to understand.</p>
-    </div>
+  <section id="testimonials" class="section testimonials-section" data-aos="zoom-in">
+    <h2>Testimonials</h2>
+    <blockquote>
+      "Working with Gloria was a fantastic experience. She brings passion, clarity, and skill to every project."
+      <cite>— Former Team Lead</cite>
+    </blockquote>
+    <blockquote>
+      "She turns complex ideas into elegant, user-friendly solutions. Highly recommended!"
+      <cite>— Mentor</cite>
+    </blockquote>
   </section>
 
-  <section id="experience" class="section experience-section">
-    <h2>Experience & Education</h2>
-    <div class="experience-box">
-      <h3>Self-Taught Software Developer</h3>
-      <p>2023 – Present</p>
-      <ul>
-        <li>Building personal projects to solve real-world problems and strengthen development skills.</li>
-        <li>Focused on simplifying complex concepts and creating practical solutions.</li>
-        <li>Actively learning new technologies through self-paced study and hands-on coding.</li>
-      </ul>
-
-      <h3>Software Engineering Bootcamp</h3>
-      <p>2023 – 2024</p>
-      <ul>
-        <li>Completed an intensive program covering web development, algorithms, and system design.</li>
-        <li>Collaborated on group projects and built solo applications from scratch.</li>
-        <li>Gained experience in modern development tools and workflows.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="tools" class="section tools-section">
-    <h2>Exploring the tools behind my design</h2>
-    <div class="tools-frame">
-      <img src="images/figma.png" alt="Figma">
-      <img src="images/photoshop.png" alt="Photoshop">
-      <img src="images/illustrator.png" alt="Illustrator">
-      <img src="images/sketch.png" alt="Sketch">
-      <img src="images/xd.png" alt="Adobe XD">
-    </div>
-  </section>
-
-  <section id="portfolio" class="section portfolio-section">
+  <section id="portfolio" class="section portfolio-section" data-aos="fade-up">
     <div class="portfolio-header">
       <h2>My Latest Projects</h2>
       <button class="view-all">View All Projects</button>
@@ -103,21 +85,44 @@
         <p>Weather Monitoring App</p>
         <a href="#"><span class="arrow">→</span></a>
       </div>
+      <div class="project-card">
+        <img src="images/project2.png" alt="Project 2">
+        <p>Task Manager API</p>
+        <a href="#"><span class="arrow">→</span></a>
+      </div>
+      <div class="project-card">
+        <img src="images/project3.png" alt="Project 3">
+        <p>DevOps CI/CD Setup</p>
+        <a href="#"><span class="arrow">→</span></a>
+      </div>
     </div>
   </section>
 
-  <section id="contact" class="section contact-section">
+  <section id="contact" class="section contact-section" data-aos="fade-right">
     <h2>Get in Touch</h2>
-    <p>Email | X (Twitter) | Instagram | Skype | Discord</p>
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="contact-btn">Send Message</button>
+    </form>
   </section>
+
+  <button id="backToTop" title="Back to Top">↑</button>
 
   <footer class="footer">
     <div class="footer-content">
-      <p>&copy; 2025 globski. All rights reserved.</p>
-      <a href="terms.html">Terms of Service</a>
+      <p>&copy; 2025 Globski. All rights reserved.</p>
+      <a href="terms.html" target="_blank">Terms of Service</a>
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
+
