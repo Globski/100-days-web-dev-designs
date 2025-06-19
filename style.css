@@ -205,6 +205,10 @@ nav {
   margin-bottom: 15px;
 }
 
+.portfolio-btn   {
+    text-decoration: none;
+}
+
 .home-right img {
   width: 220px;
   height: 220px;
