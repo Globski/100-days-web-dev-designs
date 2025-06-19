@@ -229,9 +229,9 @@ nav {
 
 /* Social Media Icons */
 .social-icons {
-  margin-top: 15px;
+  margin-top: 20px;
   display: flex;
-  gap: 12px;
+  gap: 15px;
 }
 
 .social-icons a {
