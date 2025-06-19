@@ -191,8 +191,11 @@ nav {
 }
 
 .hello-box {
+  width: 21%;
   font-size: 1.2rem;
   color: #777;
+  border-radius: 10%;
+  border: 2px solid #FF5A5F;
 }
 
 .highlight {
