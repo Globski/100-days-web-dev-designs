@@ -261,6 +261,7 @@ nav {
 
 /* Project Grid */
 .project-grid {
+  background: linear-gradient(135deg, #ffe5ec, #fff0f3, #ffffff);
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
