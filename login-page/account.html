@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!-- Tells the browser this document uses HTML5 -->
+
+<html lang="en">
+<!-- Root element of the webpage. "lang=en" specifies English language -->
+
+<head>
+<!-- Contains metadata, title, and styles -->
+
+<meta charset="UTF-8">
+<!-- Sets character encoding so text displays correctly -->
+
+<title>My Account</title>
+<!-- Title shown on the browser tab -->
+
+<style>
+/* CSS styling for the page */
+
+/* BODY STYLE */
+body{
+font-family:Segoe UI;
+/* Sets the font used across the page */
+
+background:#0f172a;
+/* Dark blue background color */
+
+color:white;
+/* All text will be white */
+
+padding:40px;
+/* Adds space inside the page edges */
+}
+
+/* MAIN CONTAINER */
+.container{
+max-width:1000px;
+/* Limits the width of the content */
+
+margin:auto;
+/* Centers the container horizontally */
+}
+
+/* PAGE TITLE */
+h1{
+margin-bottom:30px;
+/* Adds space below the heading */
+}
+
+/* CARD COMPONENT */
+.card{
+border:1px solid rgba(255,255,255,0.15);
+/* Light border around the card */
+
+border-radius:12px;
+/* Rounded corners */
+
+padding:25px;
+/* Space inside the card */
+
+margin-bottom:20px;
+/* Space between cards */
+
+background:#111827;
+/* Dark background color for the card */
+}
+
+/* SUBSCRIPTION CARD LAYOUT */
+.subscription{
+display:flex;
+/* Uses flexbox layout */
+
+justify-content:space-between;
+/* Pushes elements apart (text left, button right) */
+
+align-items:center;
+/* Vertically centers the content */
+}
+
+/* BUTTON STYLE */
+button{
+background:#4CAF50;
+/* Green button color */
+
+border:none;
+/* Removes default border */
+
+padding:10px 18px;
+/* Adds space inside button */
+
+border-radius:6px;
+/* Rounded corners */
+
+color:white;
+/* Button text color */
+
+cursor:pointer;
+/* Mouse cursor becomes a pointer when hovering */
+}
+
+</style>
+</head>
+
+<body>
+<!-- Visible page content starts here -->
+
+<div class="container">
+<!-- Main wrapper that centers the page content -->
+
+<h1>My Account</h1>
+<!-- Page title -->
+
+<div class="card">
+<!-- First card showing account information -->
+
+<h3>Account Info</h3>
+<!-- Card heading -->
+
+<p>Email: user@email.com</p>
+<!-- Displays user's email -->
+
+<p>Status: Active</p>
+<!-- Shows account status -->
+</div>
+
+<div class="card subscription">
+<!-- Subscription card with flex layout -->
+
+<div>
+<!-- Left side of subscription section -->
+
+<h3>Subscription</h3>
+<!-- Section title -->
+
+<p>Next Renewal: 12 July 2026</p>
+<!-- Shows subscription renewal date -->
+</div>
+
+<button>Renew</button>
+<!-- Button that could trigger subscription renewal -->
+</div>
+
+<div class="card">
+<!-- Third card section -->
+
+<h3>Services</h3>
+<!-- Section title -->
+
+<p>You can edit this section later.</p>
+<!-- Placeholder text for future features -->
+</div>
+
+</div>
+
+</body>
+</html>
