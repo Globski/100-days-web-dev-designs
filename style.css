@@ -28,7 +28,7 @@ font-family:Inter;
 /* BLOBS */
 .blob{
 position:absolute;
-width:350px;
+width:250px;
 height:350px;
 border-radius:50%;
 filter:blur(120px);
