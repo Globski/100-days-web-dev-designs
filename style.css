@@ -71,7 +71,7 @@ text-align:center;
 
 .slide{
 position:absolute;
-width:250px;
+width:450px;
 opacity:0;
 transition:1s;
 }
